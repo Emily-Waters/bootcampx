@@ -1,7 +1,7 @@
 SELECT students.name 
   AS student, 
 AVG(assignment_submissions.duration)
-  AS average_assigment_duration
+  AS average_assigNment_duration
 
 FROM students
 
@@ -11,4 +11,4 @@ JOIN assignment_submissions
 WHERE students.end_date IS NULL
 
 GROUP BY student
-ORDER BY average_assigment_duration DESC;
+ORDER BY average_assigNment_duration DESC;
