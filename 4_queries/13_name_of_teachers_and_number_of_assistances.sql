@@ -1,8 +1,10 @@
 SELECT
-  DISTINCT(teachers.name)
+  teachers.name
     AS teacher,
   cohorts.name
-    AS cohort
+    AS cohort,
+  COUNT(assistance_requests)
+    AS total_assistances
 FROM
   assistance_requests
 JOIN
@@ -16,5 +18,8 @@ JOIN
     ON students.cohort_id = cohorts.id
 WHERE 
   cohorts.name = 'JUL02'
+GROUP BY 
+  teachers.name,
+  cohorts.name
 ORDER BY
   teachers.name ASC;
