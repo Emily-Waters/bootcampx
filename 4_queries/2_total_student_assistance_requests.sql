@@ -10,4 +10,4 @@ JOIN
 WHERE
   students.name = 'Elliot Dickinson'
 GROUP BY 
-  students.name
+  students.name;
